@@ -12,12 +12,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="App-contents">
           <Switch>
             <Route path="/page-one" component={PageOne} />
             <Route path="/page-two" component={PageTwo} />
           </Switch>
-        </header>
+        </div>
       </div>
     );
   }
