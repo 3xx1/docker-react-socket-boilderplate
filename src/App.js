@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+
+// Containers
+import PageOne from './containers/PageOne/loadable';
+
+// Styles
 import './App.scss';
 
 class App extends Component {
