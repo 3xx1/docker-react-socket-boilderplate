@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 // Containers
 import PageOne from './containers/PageOne/loadable';
@@ -12,6 +13,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>Hello world.</p>
+          <Switch>
+            <Route path="/page-one" component={PageOne} />
+          </Switch>
         </header>
       </div>
     );
