@@ -2,7 +2,10 @@ import { connect } from 'react-redux';
 
 import PageOne from './template';
 import * as PageOneActions from './redux/actions';
+
+// Socket Service Layer
 import SocketClientService from '../../services/socket-client.service';
+const socketClientService = new SocketClientService();
 
 const mapStateToProps = (state) => {
   return {
@@ -12,8 +15,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onIncrement: () => dispatch(PageOneActions.increment()),
-  onDecrement: () => dispatch(PageOneActions.decrement())
+  onIncrement: () => socketClientService.dispatchGlobal(PageOneActions.increment()),
+  onDecrement: () => socketClientService.dispatchGlobal(PageOneActions.decrement())
 });
 
 export default connect(

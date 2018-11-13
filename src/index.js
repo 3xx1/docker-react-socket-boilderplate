@@ -12,7 +12,7 @@ import App from './containers/_App/template';
 import configureStore from './index.store';
 
 const history = createHistory();
-const store = configureStore({}, history);
+export const store = configureStore({}, history);
 
 ReactDOM.render((
   <Provider store={store}>

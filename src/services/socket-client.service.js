@@ -1,3 +1,4 @@
+import { store } from '../index.js';
 import * as io from 'socket.io-client';
 
 export default class SocketClientService {
@@ -6,8 +7,8 @@ export default class SocketClientService {
     self.url = `http://${window.document.location.hostname}:3001/`;
     self.socket = io( self.url );
 
-    self.socket.on('action.dispatch', (msg) => {
-      // dispatch your action
+    self.socket.on('action.dispatch', (action) => {
+      store.dispatch(action);
     });
 
     self.socket.on('refresh', () => {
@@ -15,13 +16,13 @@ export default class SocketClientService {
     });
   }
 
-  globalActionDispatcher(action) {
-    // dispatch your action
+  dispatchGlobal(action) {
+    store.dispatch(action);
     this.dispatchRemoteAction(action);
   }
 
-  dispatchRemoteAction(data) {
-    this.socket.emit('action.dispatch', { data });
+  dispatchRemoteAction(action) {
+    this.socket.emit('action.dispatch', action);
   }
 
   refreshPage() {

@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import PageTwo from './template';
 import * as PageTwoActions from './redux/actions';
 
+// Socket Service Layer
+import SocketClientService from '../../services/socket-client.service';
+const socketClientService = new SocketClientService();
+
 const mapStateToProps = (state) => {
   return {
     value1: state.get('pageOne').get('value'),
@@ -12,7 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   onUpdateValue: (event) => {
-    dispatch(PageTwoActions.updateValue( parseInt(event.target.value) ));
+    socketClientService.dispatchGlobal(PageTwoActions.updateValue( parseInt(event.target.value) ));
   }
 });
 
