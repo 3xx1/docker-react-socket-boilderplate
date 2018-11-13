@@ -15,6 +15,7 @@ export default class PageOne extends React.PureComponent {
         <p>Value 2: {this.props.value2}</p>
         <button onClick={this.props.onIncrement}>Increment</button>
         <button onClick={this.props.onDecrement}>Decrement</button>
+        <button onClick={this.props.onRefresh}>Refresh</button>
       </div>
     );
   }
@@ -25,5 +26,6 @@ PageOne.propTypes = {
   value1: PropTypes.number,
   value2: PropTypes.number,
   onIncrement: PropTypes.func,
-  onDecrement: PropTypes.func
+  onDecrement: PropTypes.func,
+  onRefresh: PropTypes.func
 };

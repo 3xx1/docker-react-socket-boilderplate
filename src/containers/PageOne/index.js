@@ -16,7 +16,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   onIncrement: () => socketClientService.dispatchGlobal(PageOneActions.increment()),
-  onDecrement: () => socketClientService.dispatchGlobal(PageOneActions.decrement())
+  onDecrement: () => socketClientService.dispatchGlobal(PageOneActions.decrement()),
+  onRefresh: () => socketClientService.refreshSystem()
 });
 
 export default connect(

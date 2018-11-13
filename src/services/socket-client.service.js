@@ -31,7 +31,7 @@ export default class SocketClientService {
     this.socket.emit('action.dispatch', action);
   }
 
-  refreshPage() {
+  refreshSystem() {
     this.socket.emit('refresh', true);
   }
 }
