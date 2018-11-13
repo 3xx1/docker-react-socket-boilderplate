@@ -1,10 +1,16 @@
-import { store } from '../index.js';
+// Dependencies
 import * as io from 'socket.io-client';
+
+// Others
+import { store } from '../index.js';
+import { environment } from '../environment';
 
 export default class SocketClientService {
   constructor() {
     const self = this;
-    self.url = `http://${window.document.location.hostname}:3001/`;
+    self.url = process.env.NODE_ENV === 'production'
+            ? `http://${window.document.location.hostname}:${environment.production.socketPort}/`
+            : `http://${window.document.location.hostname}:${environment.development.socketPort}/`;
     self.socket = io( self.url );
 
     self.socket.on('action.dispatch', (action) => {
