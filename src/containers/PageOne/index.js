@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import PageOne from './template';
 import * as PageOneActions from './redux/actions';
+import SocketClientService from '../../services/socket-client.service';
 
 const mapStateToProps = (state) => {
   return {
