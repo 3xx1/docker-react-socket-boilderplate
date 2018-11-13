@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Containers
-import PageOne from './containers/PageOne/loadable';
-import PageTwo from './containers/PageTwo/loadable';
+import PageOne from '../PageOne/loadable';
+import PageTwo from '../PageTwo/loadable';
 
 // Styles
-import './App.scss';
+import './style.scss';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-contents">
+      <div className="app">
+        <div className="app-contents">
           <Switch>
             <Route path="/page-one" component={PageOne} />
             <Route path="/page-two" component={PageTwo} />
