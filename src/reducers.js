@@ -5,7 +5,8 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 
 // Children Reducers
 import globalReducer from './containers/_App/redux/reducer';
-
+import pageOneReducer from './containers/PageOne/redux/reducer';
+import pageTwoReducer from './containers/PageTwo/redux/reducer';
 
 // Initial routing state
 const routeInitialState = fromJS({
@@ -28,6 +29,8 @@ export default function createReducer(injectedReducers) {
   return combineReducers({
     route: routeReducer,
     global: globalReducer,
+    pageOne: pageOneReducer,
+    pageTwo: pageTwoReducer,
     ...injectedReducers
   });
 }
