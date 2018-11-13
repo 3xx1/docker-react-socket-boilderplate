@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import PageOne from './page';
+import PageOne from './template';
 import * as PageOneActions from './redux/actions';
 
 const mapStateToProps = (state) => {

@@ -8,7 +8,7 @@ import createHistory from 'history/createBrowserHistory';
 // Definitions
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
-import App from './containers/_App/page';
+import App from './containers/_App/template';
 import configureStore from './index.store';
 
 const history = createHistory();

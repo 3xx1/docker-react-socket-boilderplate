@@ -5,7 +5,7 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  value: 0
+  value: 30
 });
 
 function pageTwoReducer(state = initialState, action) {

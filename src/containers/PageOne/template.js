@@ -10,7 +10,7 @@ export default class PageOne extends React.PureComponent {
   render() {
     return (
       <div className="page-one-container">
-        <p>Page One Container</p>
+        <p>Page 1 Container</p>
         <p>Value 1: {this.props.value1}</p>
         <p>Value 2: {this.props.value2}</p>
         <button onClick={this.props.onIncrement}>Increment</button>
