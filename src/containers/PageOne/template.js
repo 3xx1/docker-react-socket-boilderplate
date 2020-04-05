@@ -5,12 +5,16 @@ import PropTypes from 'prop-types';
 // Styles
 import './style.scss';
 
+// Components
+import Visual from '../../components/Visual';
+
 // Class
 export default class PageOne extends React.PureComponent {
   render() {
     return (
       <div className="page-one-container">
         <p>Page 1 Container</p>
+        <Visual count={this.props.value1} xPosition={this.props.value2} />
         <p>Value 1: {this.props.value1}</p>
         <p>Value 2: {this.props.value2}</p>
         <button onClick={this.props.onIncrement}>Increment</button>

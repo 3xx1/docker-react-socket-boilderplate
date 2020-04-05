@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Components
 import Slider from '../../components/Slider';
+import Visual from '../../components/Visual';
 
 // Styles
 import './style.scss';
@@ -14,6 +15,7 @@ export default class PageTwo extends React.PureComponent {
     return (
       <div className="page-two-container">
         <p>Page 2 Container</p>
+        <Visual count={this.props.value1} xPosition={this.props.value2} />
         <p>Value 1: {this.props.value1}</p>
         <p>Value 2: {this.props.value2}</p>
         <Slider

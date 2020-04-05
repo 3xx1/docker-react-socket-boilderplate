@@ -1,0 +1,15 @@
+.visual-component {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 32px;
+  
+  // your style.
+  .indicator {
+    margin: 0 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 25px;
+    background-color: #22aaaa;
+  }
+}
